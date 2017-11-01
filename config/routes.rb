@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root "dictionaries#index"
+  resources :words
+  root "words#index"
 
   resources :dictionaries
   resources :users

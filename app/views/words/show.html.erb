@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Chinese:</strong>
+  <%= @word.chinese %>
+</p>
+
+<p>
+  <strong>English:</strong>
+  <%= @word.english %>
+</p>
+
+<p>
+  <strong>Pinyin:</strong>
+  <%= @word.pinyin %>
+</p>
+
+<p>
+  <strong>Part of speech:</strong>
+  <%= @word.part_of_speech %>
+</p>
+
+<p>
+  <strong>Mnemonic:</strong>
+  <%= @word.mnemonic %>
+</p>
+
+<p>
+  <strong>Times tested:</strong>
+  <%= @word.times_tested %>
+</p>
+
+<p>
+  <strong>Times correct:</strong>
+  <%= @word.times_correct %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
