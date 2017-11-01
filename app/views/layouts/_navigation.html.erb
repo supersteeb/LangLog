@@ -1,0 +1,18 @@
+<div class="ui inverted fixed menu">
+  <a class="item">
+     <%= link_to 'Home', words_path, class: 'ui primary button' %>
+  </a>
+  <a class="item">
+    Messages
+  </a>
+  <a class="item">
+    Friends
+  </a>
+	<div class="right item">
+		<% if user_signed_in? %>
+	    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:'tiny ui orange button', id: 'sign_out_button' %>		
+    <% else %>
+			 <%= link_to 'Sign In', new_user_session_path, class: 'tiny ui primary button', id: 'sign_in_button' %>
+	  <% end %>  
+	</div>
+</div>
