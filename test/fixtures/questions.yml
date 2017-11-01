@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  test: one
+  correct_word: 1
+  false_word: MyText
+
+two:
+  test: two
+  correct_word: 1
+  false_word: MyText

@@ -25,7 +25,7 @@
         <td><%= word.pinyin %></td>
         <td><%= word.part_of_speech %></td>
         <td><%= word.mnemonic %></td>
-        <td><%= word.times_correct / words.times_tested %></td>
+        <td><%# word.times_correct / word.times_tested %></td>
         <td><%= link_to 'Show', word %></td>
         <td><%= link_to 'Edit', edit_word_path(word) %></td>
         <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>

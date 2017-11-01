@@ -1,5 +1,5 @@
 class Word < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, :dependent => :destroy
 
   validates :chinese, presence: true, uniqueness: {case_sensitive: false}
 	validates :english, presence: true

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  logs: 
+  test_type: 1
+
+two:
+  user: two
+  logs: 
+  test_type: 1
