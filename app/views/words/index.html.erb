@@ -19,7 +19,7 @@
   <tbody>
     <% @words.each do |word| %>
       <tr>
-        <td><%= word.user %></td>
+        <td><%= word.user.first_name %></td>
         <td><%= word.chinese %></td>
         <td><%= word.english %></td>
         <td><%= word.pinyin %></td>
