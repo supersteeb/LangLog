@@ -7,6 +7,7 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-semantic', '2.2.12'
+  gem 'rails-assets-noty'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -2,7 +2,7 @@
 
 <h1>Words</h1>
 
-<table>
+<table class="ui celled table">
   <thead>
     <tr>
       <th>User</th>
@@ -26,9 +26,9 @@
         <td><%= word.part_of_speech %></td>
         <td><%= word.mnemonic %></td>
         <td><%# word.times_correct / word.times_tested %></td>
-        <td><%= link_to 'Show', word %></td>
-        <td><%= link_to 'Edit', edit_word_path(word) %></td>
-        <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', word, class: 'ui mini button' %></td>
+        <td><%= link_to 'Edit', edit_word_path(word), class: 'ui mini button' %></td>
+        <td><%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' }, class: 'ui mini button' %></td>
       </tr>
     <% end %>
   </tbody>

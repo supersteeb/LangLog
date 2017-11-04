@@ -10,23 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101144847) do
+ActiveRecord::Schema.define(version: 20171104133557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "dictionaries", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "chinese"
-    t.string   "english"
-    t.string   "pinyin"
-    t.string   "part_of_speech"
-    t.integer  "times_tested"
-    t.integer  "times_correct"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["user_id"], name: "index_dictionaries_on_user_id", using: :btree
-  end
 
   create_table "questions", force: :cascade do |t|
     t.integer  "test_id"
@@ -82,7 +69,6 @@ ActiveRecord::Schema.define(version: 20171101144847) do
     t.index ["user_id"], name: "index_words_on_user_id", using: :btree
   end
 
-  add_foreign_key "dictionaries", "users"
   add_foreign_key "questions", "tests"
   add_foreign_key "tests", "users"
   add_foreign_key "words", "users"

@@ -1,0 +1,12 @@
+<% if alert.present? || notice.present? %>
+	<script>
+		new Noty({
+			layout: 'topRight',
+			theme: 'mint',
+			type: 'info',
+			text: " <%= alert || notice %>",
+			closeWith: ['button'],
+			timeout: 1000
+		}).show();
+	</script>
+<% end %>

@@ -1,0 +1,16 @@
+jQuery(document).on('page:change turbolinks:load', function() {
+
+	$('#log_in_checkbox.ui.checkbox').checkbox({
+		onChecked: function() {
+			new Noty({
+				layout: 'topRight',
+				theme: 'mint',
+				type: 'info',
+				text: "remember user",
+				closeWith: ['button'],
+				timeout: 1000
+			}).show();
+		}
+	});
+
+})

@@ -1,13 +1,5 @@
 <div class="ui inverted fixed menu">
-  <a class="item">
-     <%= link_to 'Home', words_path, class: 'ui primary button' %>
-  </a>
-  <a class="item">
-    Messages
-  </a>
-  <a class="item">
-    Friends
-  </a>
+    <%= link_to 'Create Test', create_tests_path, class: 'item' %>
 	<div class="right item">
 		<% if user_signed_in? %>
 	    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:'tiny ui orange button', id: 'sign_out_button' %>		
