@@ -1,6 +1,11 @@
 <h1>Editing Word</h1>
+<div class="ui left grid">
+  <div class="six wide column">
+    <div class="ui segment">
+		<%= render 'form', word: @word %>
 
-<%= render 'form', word: @word %>
-
-<%= link_to 'Show', @word %> |
-<%= link_to 'Back', words_path %>
+		<%= link_to 'Show', @word %> |
+		<%= link_to 'Back', words_path %>		      
+    </div>
+  </div>
+</div>

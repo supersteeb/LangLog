@@ -10,7 +10,6 @@ class WordsController < ApplicationController
   # GET /words/1
   # GET /words/1.json
   def show
-    @word = current_user.words 
   end
 
   # GET /words/new
