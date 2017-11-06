@@ -1,0 +1,10 @@
+<div class="ui small modal" id="select_test_type">
+  <div class="header">Header</div>
+  <div class="content">
+	 <%= link_to "Chinese To English", create_tests_path(type: 0), class: 'ui fluid button' %>
+	 <br>
+	 <%= link_to "English To Chinese", create_tests_path(type: 1), class: 'ui fluid button' %>
+	 <br>
+	 <%= link_to "Chinese To Pinyin", create_tests_path(type: 2), class: 'ui fluid button' %>
+  </div>
+</div>

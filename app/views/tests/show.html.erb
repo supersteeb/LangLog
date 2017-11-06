@@ -1,1 +1,16 @@
- <%= params[:id] %>
+<div class="ui form">
+  <div class="grouped fields">
+  	<% @questions.each do |question| %>
+	    <label> <%= question[:question] %></label>
+		<% question[:options].each do |option| %>
+		    <div class="field">
+		      <div class="ui radio checkbox">
+		        <input type="radio" name="example2">
+		        <label><%= option %></label>
+		      </div>
+		    </div>
+		<% end %>
+	<% end %>
+  </div>
+</div>
+
