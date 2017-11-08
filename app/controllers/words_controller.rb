@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   before_action :set_word, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate
 
   # GET /words
   # GET /words.json
@@ -72,4 +73,11 @@ class WordsController < ApplicationController
     def word_params
       params.require(:word).permit(:chinese, :english, :pinyin, :part_of_speech, :mnemonic)
     end
+
+    def authenticate
+      unless current_user
+        redirect_to new_user_session_path
+      end
+    end
+
 end

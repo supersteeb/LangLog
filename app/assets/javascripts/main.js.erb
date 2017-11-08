@@ -13,7 +13,25 @@ jQuery(document).on('page:change turbolinks:load', function() {
 		}
 	});
 
+	$('.ui.radio.checkbox').checkbox();
+
 	$('.create_test_link').click(function() {
 		$('#select_test_type').modal('show');
 	});
+
+	$submission = {};
+	$('.ui.checkbox').checkbox({
+		onChecked: function() {
+			$submission[$(this).attr('name')] = $(this).data('option');
+		}
+	}); 
+	// appends to submission object key (question name) value (user option) pais
+	$('#submit_test_btn').click(function(e) {
+		$('#user_submission').val(JSON.stringify($submission));
+		$('#test_questions').submit();
+	})
+	// $('input').val(); <= assigns value for input, 
+	// #user_submission is the id of the input and JSON.stringify - converts to string
+	// $('#id')
+	// #test_questions is the id of the form
 })
