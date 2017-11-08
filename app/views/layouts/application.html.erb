@@ -9,8 +9,12 @@
   </head>
 
   <body>
-      <%= link_to 'Sign_out', destroy_user_session_path, method: :delete %>
+    <%= render 'layouts/flash_message' %>
+    <%= render 'layouts/navigation' %>
+    <div id="main_container" class="ui container">
       <p class="alert"><%= alert %></p>
-    <%= yield %>
+      <%= yield %>
+    </div>
+  <%= render 'tests/test_type_modal' %>
   </body>
 </html>

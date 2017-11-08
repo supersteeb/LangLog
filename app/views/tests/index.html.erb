@@ -1,0 +1,19 @@
+<div class="ui grid">
+	<div class="sixteen wide column">
+		<a class="create_test_link ui right floated blue button"> Create Test</a>
+	</div>
+</div>
+<div class="ui divider"></div>
+<div class="ui cards">
+ <% @tests.each do |test| %>
+	<div class="card">
+		<div class="content">
+			<div class="header"> <%= "#{test.test_type.titleize} ##{test.id}" %></div>
+			<div class="meta"> <%= test.created_at.strftime("%B %e, %Y") %></div>
+			<div class="description">
+				 <%= link_to 'Test Details', show_tests_path(id: test.id), class: 'ui fluid button' %>
+			</div>
+		</div>
+	</div>
+ <% end %>
+</div>

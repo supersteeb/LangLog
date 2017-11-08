@@ -1,42 +1,43 @@
-<%= form_for(word) do |f| %>
-  <% if word.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(word.errors.count, "error") %> prohibited this word from being saved:</h2>
+      <%= form_for(word, html:{class: 'ui form'}) do |f| %>
+        <% if word.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(word.errors.count, "error") %> prohibited this word from being saved:</h2>
 
-      <ul>
-      <% word.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+              <ul>
+              <% word.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+        <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.label :chinese %>
+            <%= f.text_field :chinese %>
+          </div>
+
+          <div class="field">
+            <%= f.label :english %>
+            <%= f.text_field :english %>
+          </div>
+
+          <div class="field">
+            <%= f.label :pinyin %>
+            <%= f.text_field :pinyin %>
+          </div>
+
+          <div class="field">
+            <%= f.label :part_of_speech %>
+            <%= f.text_field :part_of_speech %>
+          </div>
+
+          <div class="field">
+            <%= f.label :mnemonic %>
+            <%= f.text_area :mnemonic %>
+          </div>
+
+          <div class="actions">
+            <button class="ui button" type="submit">Submit</button>
+          </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :chinese %>
-    <%= f.text_field :chinese %>
-  </div>
-
-  <div class="field">
-    <%= f.label :english %>
-    <%= f.text_field :english %>
-  </div>
-
-  <div class="field">
-    <%= f.label :pinyin %>
-    <%= f.text_field :pinyin %>
-  </div>
-
-  <div class="field">
-    <%= f.label :part_of_speech %>
-    <%= f.text_field :part_of_speech %>
-  </div>
-
-  <div class="field">
-    <%= f.label :mnemonic %>
-    <%= f.text_area :mnemonic %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

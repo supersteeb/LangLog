@@ -1,0 +1,13 @@
+<div class="ui inverted fixed menu">
+	<div class="ui container">
+		 <%= link_to raw('<i class="home icon"></i> Home'), root_path, class: 'item' %>
+		 <%= link_to raw('<i class="file icon"></i>View Tests'), tests_path, class: 'item' %>
+		<div class="right item">
+			<% if user_signed_in? %>
+		    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:'tiny ui orange button', id: 'sign_out_button' %>		
+	    <% else %>
+				 <%= link_to 'Sign In', new_user_session_path, class: 'tiny ui primary button', id: 'sign_in_button' %>
+		  <% end %>  
+		</div>
+	</div>
+</div>
