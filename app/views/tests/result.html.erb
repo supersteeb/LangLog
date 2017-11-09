@@ -1,0 +1,31 @@
+<div class="ui accordion">
+ <% @result.each do |key, value| %>
+  <div class="title">
+      <i class="dropdown icon"></i>
+      <a class="header"> <%= "Number of answered questions: #{value['result'].count}. Grade: #{value['grade']}%" %></a>
+      <div class="description"> <%= "Submitted #{distance_of_time_in_words(Time.at(key.to_i), Time.now)} ago" %></div>
+	</div>
+  <div class="content">
+  	<div class="transition hidden">
+	<div class="ui divided relaxed list">
+		<% value['result'].each do |question| %>
+			<div class="item"> 
+				<% if question['correct'] %>
+					<i class="green big check circle icon"></i>
+				<% else %>
+					<i class="red big remove circle icon"></i>
+				<% end %>
+				<div class="content">
+					<div class="header"><%= question['question_text'] %></div>
+					<div class="description" >
+						<%= "You answered: #{question['user_submission']}" %> |
+						<%= "Correct Word: #{question['question_word']}"%>
+					</div>
+				</div>
+			</div>
+  		<% end %>
+	</div>
+  	</div>
+  </div>
+ <% end %>
+</div>

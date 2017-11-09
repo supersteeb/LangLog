@@ -1,16 +1,20 @@
-<div class="ui form">
+<%= form_tag submit_tests_path, class: 'ui form', id:'test_questions' do %>
   <div class="grouped fields">
-  	<% @questions.each do |question| %>
-	    <label> <%= question[:question] %></label>
-		<% question[:options].each do |option| %>
-		    <div class="field">
-		      <div class="ui radio checkbox">
-		        <input type="radio" name="example2">
-		        <label><%= option %></label>
-		      </div>
-		    </div>
-		<% end %>
+  	<% @questions.each_with_index do |question, index| %>
+	    <div class="question-block">
+	    	<label class="question-<%= question[:id] %>"> <%= "#{index + 1}. #{question[:question]}" %></label>
+			<% question[:options].each do |option| %>
+			    <div class="field">
+			      <div class="ui radio checkbox" data-question-id="<%= question[:id] %>" id="question-<%= question[:id] %>">
+			        <input type="radio" name="question-<%= question[:id] %>"
+			        					data-option="<%= option %>">
+			        <label><%= option %></label>
+			      </div>
+			    </div>
+			<% end %>
+	    </div>
 	<% end %>
   </div>
-</div>
-
+  <input type="hidden" id="user_submission" name="user_submission">
+  <button type="button" class="ui button" id="submit_test_btn">Submit Answer</button>
+<% end %>
