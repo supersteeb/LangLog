@@ -2,9 +2,7 @@ LangLog
 
 An extension of my "LearnChinese" app with a test. 
 
-Things you may want to cover:
 
-* Ruby version 2.3.0
 ## User Stories
 
 ### Features:
@@ -18,7 +16,7 @@ Log:
 - Don't use scaffold - better to customize. When destroying scaffold, destroy table first, then destroy scaffold
 - playing with jsonb to store hash or array in table column
 
-Problem
+Problems
 - Nov 5 upon logging out still shows words. should take to new session 
 
 ### Desired Features:
@@ -35,7 +33,12 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+##MISC:
+
+* Ruby version 2.3.0
+* Semantic UI
+* Gems - Groupdate, Devise, Chartkick
+
 
 ## License
 
