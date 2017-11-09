@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get 'create', to: 'tests#create', as:'create'
       get ':id', to: 'tests#show', as: 'show'
       post 'submit/:id', to: 'tests#submit_answer', as: 'submit'
+      get 'result/:id', to: 'tests#result', as: 'result'
     end
   end
 

@@ -28,6 +28,9 @@ gem 'coffee-rails', '~> 4.2'
 #authentication
 gem 'devise'
 
+gem 'groupdate'
+gem 'chartkick', '~>2.2.5'
+
 #admin
 gem 'administrate'
 

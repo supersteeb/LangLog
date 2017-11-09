@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= line_chart current_user.words.group_by_day(:created_at).count %>
+
+
 <%= render 'inline_form', word: @word %>
 
 <table class="ui celled table">

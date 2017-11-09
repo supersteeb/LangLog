@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require semantic
 //= require noty
+//= require Chart.bundle
+//= require chartkick
 //= require main
