@@ -2,7 +2,6 @@ LangLog
 
 An extension of my "LearnChinese" app with a test. 
 
-
 ## User Stories
 
 ### Features:
@@ -11,13 +10,6 @@ An extension of my "LearnChinese" app with a test.
 * [x] Can create new word
 * [x] Tracks how many words are added per day
 * [x] Test that randomly generates questions (based on test-type)
-
-Log:
-- Don't use scaffold - better to customize. When destroying scaffold, destroy table first, then destroy scaffold
-- playing with jsonb to store hash or array in table column
-
-Problems
-- Nov 5 upon logging out still shows words. should take to new session 
 
 ### Desired Features:
 - As more tests are taken, the number of times a word is tested, determines its 'weight.' Higher 'weight' means less likely to be tested in the future (meaning it is more committed to memory). But specific to the type of test. 
@@ -32,8 +24,13 @@ Here's a walkthrough of implemented user stories (as of Nov 9, 2017):
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
+Log:
+- Don't use scaffold - better to customize. When destroying scaffold, destroy table first, then destroy scaffold
+- playing with jsonb to store hash or array in table column
+Problems
+- Nov 5 upon logging out still shows words. should take to new session 
 
-##MISC:
+### MISC:
 
 * Ruby version 2.3.0
 * Semantic UI
